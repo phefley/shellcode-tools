@@ -1,5 +1,11 @@
 import sys
 
+if len(sys.argv) != 3:
+    print("Usage: python chunker.py <inputfile> <outputfile>")
+    print("This script reads a binary file and converts it into a C-style string "
+          "representation suitable for use as shellcode.")
+    sys.exit(1)
+
 INFILENAME = sys.argv[1]
 OUTFILENAME = sys.argv[2]
 WIDTH = 40
